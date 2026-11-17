@@ -1,50 +1,101 @@
-.conferences {
-  padding: 1rem;
+.card {
+  background: white;
+  border-left: 5px solid #2eb35c;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
 
-.conferences input {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.conferences ul {
-  list-style: none;
-  padding: 0;
+.icon {
+  width: 58px;
+  height: 58px;
   display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf2fb;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+h2 {
+  margin-top: 0;
+  color: #173b67;
+}
+
+.subtitle {
+  color: #7a8699;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.search {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #d3dbe5;
+  border-radius: 8px;
+  background: #f2f5f9;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1rem;
 }
 
 .conference-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
   padding: 1rem;
+  background: #fbfcfe;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.conference-card h3 {
+  margin-top: 0;
+  color: #1e4f8f;
+  font-size: 1.05rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.conference-card p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
 }
 
 .conference-card button {
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  padding: 0.55rem 1.1rem;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  font-style: italic;
   cursor: pointer;
 }
 
 .conference-card button:disabled {
   cursor: not-allowed;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .vert {
-  background-color: #28a745;
+  background-color: #1d9b46;
 }
 
 .orange {
-  background-color: #fd7e14;
+  background-color: #ef8500;
 }
 
 .rouge {
-  background-color: #dc3545;
+  background-color: #d93025;
 }

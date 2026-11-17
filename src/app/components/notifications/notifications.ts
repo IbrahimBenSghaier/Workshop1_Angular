@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './notifications.html',
   styleUrl: './notifications.css',
 })
-export class Notifications {}
+export class Notifications {
+  messages = ['Nouvelle conférence ajoutée', 'Sami vous a envoyé un message'];
+  visible = false;
+
+  afficher(): void {
+    this.visible = !this.visible;
+  }
+}

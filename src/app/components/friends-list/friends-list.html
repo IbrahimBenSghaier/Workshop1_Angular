@@ -1,9 +1,16 @@
-<section class="friends">
-  <h2>Liste des amis</h2>
-  <ul>
-    <li>Ahmed</li>
-    <li>Sarra</li>
-    <li>Mohamed</li>
-    <li>Ines</li>
-  </ul>
+<section class="card" id="amis">
+  <div class="icon">👥</div>
+  <div>
+    <h2>Liste des amis</h2>
+    <div class="friend-inputs">
+      @for (friend of friends; track $index) {
+        <input type="text" [(ngModel)]="friends[$index]" />
+      }
+    </div>
+    <ul>
+      @for (friend of others; track friend) {
+        <li>{{ friend }}</li>
+      }
+    </ul>
+  </div>
 </section>

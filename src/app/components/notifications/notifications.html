@@ -1,4 +1,15 @@
-<section class="notifications">
-  <h2>Notifications</h2>
-  <p>Bienvenue sur l'application de gestion des conférences !</p>
+<section class="card" id="notifications">
+  <div class="icon">🔔</div>
+  <div>
+    <h2>Zone de notifications</h2>
+    <p>Vous avez {{ messages.length }} nouvelles notifications.</p>
+    <button (click)="afficher()">Afficher les notifications</button>
+    @if (visible) {
+      <ul>
+        @for (message of messages; track message) {
+          <li>{{ message }}</li>
+        }
+      </ul>
+    }
+  </div>
 </section>

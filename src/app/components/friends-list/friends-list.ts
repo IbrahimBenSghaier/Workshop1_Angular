@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-friends-list',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './friends-list.html',
   styleUrl: './friends-list.css',
 })
-export class FriendsList {}
+export class FriendsList {
+  friends = ['Ahmed', 'Ahmed', 'Ahmed'];
+
+  others = ['Sami', 'Sarra', 'Amine'];
+}
