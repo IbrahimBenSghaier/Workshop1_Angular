@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  gap: 1rem;
+  background-color: #303f9f;
+  padding: 0.75rem 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}

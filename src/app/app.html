@@ -1,2 +1,17 @@
+<app-header></app-header>
 <app-navbar></app-navbar>
+
+<main class="layout">
+  <aside class="sidebar">
+    <app-profile></app-profile>
+    <app-friends-list></app-friends-list>
+    <app-notifications></app-notifications>
+  </aside>
+
+  <section class="content">
+    <app-conference-list></app-conference-list>
+  </section>
+</main>
+
+<app-footer></app-footer>
 <router-outlet />
