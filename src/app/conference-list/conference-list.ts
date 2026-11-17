@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DatePipe, NgClass, UpperCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Conference } from '../models/conference';
+import { Conference } from '../Models/conference';
 
 @Component({
   selector: 'app-conference-list',
