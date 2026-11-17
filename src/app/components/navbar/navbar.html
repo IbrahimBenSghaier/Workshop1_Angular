@@ -1,6 +1,5 @@
 <nav class="navbar">
-  <a href="#">Accueil</a>
-  <a href="#">Conférences</a>
-  <a href="#">À propos</a>
-  <a href="#">Contact</a>
+  @for (item of links; track item.name) {
+    <a>{{ item.name }}</a>
+  }
 </nav>
