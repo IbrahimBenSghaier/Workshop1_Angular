@@ -17,23 +17,21 @@
     @if (upcomingConferences.length > 0) {
       <div class="grid">
         @for (conference of upcomingConferences; track conference.id) {
+          @let places = conference.maxParticipants - conference.nbParticipants;
           <article class="conference-card">
             <h3>{{ conference.title | uppercase }}</h3>
             <p>
               <strong>Date :</strong> {{ conference.date | date: 'dd/MM/yyyy' }}
             </p>
             <p><strong>Lieu :</strong> {{ conference.place }}</p>
-            <p>
-              <strong>Places restantes :</strong>
-              {{ placesRestantes(conference) }}
-            </p>
+            <p><strong>Places restantes :</strong> {{ places }}</p>
             <button
               [ngClass]="{
-                vert: placesRestantes(conference) >= 10,
-                orange: placesRestantes(conference) > 0 && placesRestantes(conference) < 10,
-                rouge: placesRestantes(conference) === 0
+                vert: places >= 10,
+                orange: places > 0 && places < 10,
+                rouge: places === 0
               }"
-              [disabled]="placesRestantes(conference) === 0"
+              [disabled]="places === 0"
               (click)="inscrire(conference)"
             >
               S'inscrire

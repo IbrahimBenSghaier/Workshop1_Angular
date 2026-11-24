@@ -51,12 +51,8 @@ export class ConferenceList {
     );
   }
 
-  placesRestantes(conference: Conference): number {
-    return conference.maxParticipants - conference.nbParticipants;
-  }
-
   inscrire(conference: Conference): void {
-    if (this.placesRestantes(conference) > 0) {
+    if (conference.nbParticipants < conference.maxParticipants) {
       conference.nbParticipants++;
     }
   }
