@@ -5,6 +5,7 @@ import { Navbar } from './components/navbar/navbar';
 import { Profile } from './components/profile/profile';
 import { FriendsList } from './components/friends-list/friends-list';
 import { Notifications } from './components/notifications/notifications';
+import { ConferenceList } from './conference-list/conference-list';
 import { Footer } from './components/footer/footer';
 
 @Component({
@@ -16,6 +17,7 @@ import { Footer } from './components/footer/footer';
     Profile,
     FriendsList,
     Notifications,
+    ConferenceList,
     Footer,
   ],
   templateUrl: './app.html',
