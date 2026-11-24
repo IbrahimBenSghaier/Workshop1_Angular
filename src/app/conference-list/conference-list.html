@@ -18,7 +18,11 @@
       <div class="grid">
         @for (conference of upcomingConferences; track conference.id) {
           @let places = conference.maxParticipants - conference.nbParticipants;
-          <article class="conference-card">
+          <article
+            class="conference-card"
+            [class.selected]="conference === selectedConference"
+            (click)="selectedConference = conference"
+          >
             <h3>{{ conference.title | uppercase }}</h3>
             <p>
               <strong>Date :</strong> {{ conference.date | date: 'dd/MM/yyyy' }}
@@ -32,13 +36,20 @@
                 rouge: places === 0
               }"
               [disabled]="places === 0"
-              (click)="inscrire(conference)"
+              (click)="inscrire(conference); $event.stopPropagation()"
             >
               S'inscrire
             </button>
           </article>
         }
       </div>
+
+      @if (selectedConference) {
+        <app-conference-details
+          [conference]="selectedConference"
+          (inscription)="inscrire($event)"
+        ></app-conference-details>
+      }
     } @else {
       <p>Aucune conférence n'est enregistrée pour le moment.</p>
     }

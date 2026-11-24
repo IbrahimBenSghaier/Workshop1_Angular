@@ -60,6 +60,11 @@ h2 {
   padding: 1rem;
   background: #fbfcfe;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.conference-card.selected {
+  border-color: #1e4f8f;
 }
 
 .conference-card h3 {

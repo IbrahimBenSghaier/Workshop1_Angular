@@ -1,0 +1,35 @@
+.details {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #d3dbe5;
+  border-left: 5px solid #1e4f8f;
+  border-radius: 12px;
+  background: #f2f5f9;
+}
+
+h3 {
+  margin-top: 0;
+  color: #1e4f8f;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+button {
+  margin-top: 0.75rem;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1e4f8f;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

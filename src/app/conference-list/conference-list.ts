@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { DatePipe, NgClass, UpperCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Conference } from '../Models/conference';
+import { ConferenceDetails } from './conference-details/conference-details';
 
 @Component({
   selector: 'app-conference-list',
-  imports: [DatePipe, UpperCasePipe, NgClass, FormsModule],
+  imports: [DatePipe, UpperCasePipe, NgClass, FormsModule, ConferenceDetails],
   templateUrl: './conference-list.html',
   styleUrl: './conference-list.css',
 })
 export class ConferenceList {
   searchTerm = '';
+  selectedConference?: Conference;
 
   conferences: Conference[] = [
     {
