@@ -18,6 +18,12 @@ p {
   font-size: 0.9rem;
 }
 
+.message {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #b8c4d4;
+}
+
 button {
   margin-top: 0.75rem;
   padding: 0.55rem 1.1rem;

@@ -11,6 +11,7 @@ import { ConferenceDetails } from './conference-details/conference-details';
   styleUrl: './conference-list.css',
 })
 export class ConferenceList {
+  MSG1 = 'Bnjr';
   searchTerm = '';
   selectedConference?: Conference;
 
@@ -51,6 +52,10 @@ export class ConferenceList {
         c.date >= today &&
         c.title.toLowerCase().includes(this.searchTerm.toLowerCase()),
     );
+  }
+
+  ShowData(M: string): void {
+    alert(M);
   }
 
   inscrire(conference: Conference): void {

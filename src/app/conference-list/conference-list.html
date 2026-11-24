@@ -48,6 +48,8 @@
         <app-conference-details
           [conference]="selectedConference"
           (inscription)="inscrire($event)"
+          [msgPere]="MSG1"
+          (msgFils)="ShowData($event)"
         ></app-conference-details>
       }
     } @else {

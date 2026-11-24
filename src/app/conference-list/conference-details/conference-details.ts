@@ -12,7 +12,14 @@ export class ConferenceDetails {
   conference = input.required<Conference>();
   inscription = output<Conference>();
 
-  sendData(): void {
+  msgPere = input<string>();
+  msgFils = output<string>();
+
+  inscrire(): void {
     this.inscription.emit(this.conference());
+  }
+
+  SendData(): void {
+    this.msgFils.emit('Hi Dad');
   }
 }

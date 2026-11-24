@@ -9,5 +9,8 @@
     {{ conference().maxParticipants }}
   </p>
   <p><strong>Places restantes :</strong> {{ places }}</p>
-  <button [disabled]="places === 0" (click)="sendData()">S'inscrire</button>
+  <button [disabled]="places === 0" (click)="inscrire()">S'inscrire</button>
+
+  <p class="message">Msg reçu depuis Père : {{ msgPere() }}</p>
+  <button (click)="SendData()">Send</button>
 </section>
